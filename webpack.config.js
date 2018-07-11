@@ -4,16 +4,16 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 var OptimizeJsPlugin = require('optimize-js-plugin');
 
-module.exports = {
-  //zaczynamy kompilacje od:
-    entry: './src/index.js',
-    output: {
-      // sciezka kompilacji
-        path: path.resolve(__dirname, 'build'),
-        // plik wyjsciowy
-        filename: 'app.bundle.js'
-    }
-};
+// module.exports = {
+//   //zaczynamy kompilacje od:
+//     entry: './src/index.js',
+//     output: {
+//       // sciezka kompilacji
+//         path: path.resolve(__dirname, 'build'),
+//         // plik wyjsciowy
+//         filename: 'app.bundle.js'
+//     }
+// };
 
 module.exports = {
     entry: './src/index.js',
