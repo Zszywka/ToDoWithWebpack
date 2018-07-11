@@ -15,8 +15,12 @@ var OptimizeJsPlugin = require('optimize-js-plugin');
 //     }
 // };
 
-module.exports = {
-    entry: './src/index.js',
+module.exports = (env) => {
+  return {
+  // developer mode setting:
+    // mode: 'development',
+    mode: env || 'production';
+    entry: './src/App.js', //??dlaczego nie index.js?
     output: {
       path: path.resolve(__dirname, 'build'),
       filename: 'app.bundle.js'
@@ -24,7 +28,7 @@ module.exports = {
     module: {
       rules: [
         {
-          test: /\.js$/,
+          test: /\.js$/, //?$
           exclude: '/node_modules',
           loader: "babel-loader"
         },
@@ -37,4 +41,5 @@ module.exports = {
         }
       ]
     }
+  }
 };
