@@ -1,25 +1,27 @@
 const path = require('path');
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-var OptimizeJsPlugin = require('optimize-js-plugin');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeJsPlugin = require('optimize-js-plugin');
 
-// module.exports = {
-//   //zaczynamy kompilacje od:
-//     entry: './src/index.js',
-//     output: {
-//       // sciezka kompilacji
-//         path: path.resolve(__dirname, 'build'),
-//         // plik wyjsciowy
-//         filename: 'app.bundle.js'
-//     }
-// };
+const plugins = [new HtmlWebpackPlugin({
+    template: 'src/index.html',
+    filename: 'index.html',
+    inject: 'body' //?why body
+})];
 
 module.exports = (env) => {
+  if (env === 'production') {
+      plugins.push(
+          new OptimizeJsPlugin({
+              sourceMap: false
+          })
+      )
+  }
   return {
   // developer mode setting:
     // mode: 'development',
-    mode: env || 'production';
+    mode: env || 'production',
     entry: './src/App.js', //??dlaczego nie index.js?
     output: {
       path: path.resolve(__dirname, 'build'),
@@ -40,6 +42,8 @@ module.exports = (env) => {
           ]
         }
       ]
-    }
+    },
+    // plugins: plugins
+    plugins
   }
 };
