@@ -36,9 +36,7 @@ class App extends React.Component {
   //usuwanie elementow
   removeTodo(id) {
     //dzieki niej tworzyny nowa tablice z odfiltrowanymi pewnymi elementami
-    //?? skad bierze todo? z powyzszej metody?jak to dokladnie dziala???
-    //funkcja bierze cala tablice elementow filtruje(sprawdza czy id aktualnie
-    // sprawdzanego elementu(id) jest = id usuwanego elementu(todo.id))
+    //id - to szukane przez nas, todo.id ->id konkretnego elementu
   const remainder = this.state.data.filter(todo => todo.id !== id);
   this.setState({data: remainder});
   }
