@@ -22,7 +22,7 @@ module.exports = (env) => {
   // developer mode setting:
     // mode: 'development',
     mode: env || 'production',
-    entry: './src/App.js', //??dlaczego nie index.js?
+    entry: './src/index.js',
     output: {
       path: path.resolve(__dirname, 'build'),
       filename: 'app.bundle.js'

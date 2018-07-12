@@ -9,8 +9,10 @@ class Title extends React.Component {
     return (
       // <h1>{props.title}</h1>
       // <h3>Number of task: {props.number}</h3>  ??kiedy props a kiedy this.props
-      <h1>ToDo</h1>
-      <h3>Number of task: {this.props.data.length}</h3>
+      <div>
+        <h1>ToDo</h1>
+        <h3>Number of task: {this.props.data.length}</h3>
+      </div>
     )
   }
 }
