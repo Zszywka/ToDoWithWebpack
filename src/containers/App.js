@@ -41,7 +41,7 @@ class App extends React.Component {
   render() {
     return (
       <div className={style.TodoApp}>
-        // <Title title="ToDo" number={this.state.data.length}></Title>
+        
         <Title data={this.state.data}/>
       </div>
     );
