@@ -8,7 +8,9 @@ class TodoList extends React.Component {
   render() {
     return (
       <ul className={style.TodoList}>
-        {this.props.data.map( (todo) => <li key={todo.id}><a href={'#'} onClick={() => this.props.remove(todo.id)}></a>{todo.text}</li>)}
+        {this.props.data.map( (todo) => <li key={todo.id}>
+          <a href={'#'} onClick={ () => this.props.remove(todo.id)} ></a>
+        {todo.text}</li>)}
       </ul>
     )
   }

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --env production",
-    "start": "webpack --env development"
+    "start": "webpack-dev-server --env development"
   },
   "keywords": [],
   "author": "",
@@ -24,12 +24,12 @@
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.7",
     "webpack": "^4.15.1",
-    "webpack-cli": "^3.0.8"
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
     "react-hot-loader": "^4.3.3",
-    "uuid": "^3.3.2",
-    "webpack-dev-server": "^3.1.4"
+    "uuid": "^3.3.2"
   }
 }
