@@ -1,4 +1,5 @@
 import React from 'react';
+import style from './Title.css'
 
 class Title extends React.Component {
   constructor(props) {
