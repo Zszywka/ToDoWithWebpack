@@ -24,11 +24,9 @@ You should:
 -> npm install --save-dev react-hot-loader
 -> npm install --save-dev webpack-dev-server
 -> npm install --save-dev react-hot-loader
-
 3. install server for developer mode:
 -> npm install --save-dev webpack-dev-server
 4. add the package.json file and write there: "start": "webpack-dev-server --env development
-
 5. write in the console:
 -> npm start
 6. open in the browser -> localhost: 8080
