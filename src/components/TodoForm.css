@@ -1,0 +1,25 @@
+.TodoForm {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	text-align: center;
+	flex-wrap: wrap;
+}
+
+.TodoForm label, .TodoForm input {
+	margin: 15px;
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 5px;
+}
+
+.TodoForm button {
+	margin: 15px;
+	width: 100px;
+	height: 30px;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+}

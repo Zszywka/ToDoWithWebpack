@@ -4,6 +4,7 @@ import style from './App.css';
 import Title from '../components/Title';
 import TodoList from '../components/TodoList.js';
 import { hot } from 'react-hot-loader';
+import TodoForm from '../components/TodoForm.js';
 
 class App extends React.Component {
   constructor(props){
@@ -46,6 +47,7 @@ class App extends React.Component {
       <div className={style.TodoApp}>
         <Title data={this.state.data}/>
         <TodoList data={this.state.data} remove={ (id) => this.removeTodo(id)}/>
+        <TodoForm data={this.state.data} addTodo={ (val) => this.addTodo(val)}/>
       </div>
     );
   }
